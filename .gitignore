@@ -1,0 +1,23 @@
+# Environment variables
+.env
+
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# SQLx offline mode
+.sqlx/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
