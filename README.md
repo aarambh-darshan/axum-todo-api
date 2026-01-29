@@ -18,6 +18,7 @@ A high-performance, asynchronous REST API for managing todo items, built with **
   - [Installation](#installation)
   - [Database Setup](#database-setup)
 - [API Documentation](#-api-documentation)
+- [Postman Collection](#-postman-collection)
 - [Author](#-author)
 
 ---
@@ -123,6 +124,28 @@ psql $DATABASE_URL -f migrations/001_init.sql
 | `PATCH` | `/todos/{id}` | **Update** title, description, or status |
 | `PATCH` | `/todos/{id}/complete` | **Mark** a todo as completed |
 | `DELETE` | `/todos/{id}` | **Delete** a todo |
+
+---
+
+## 📮 Postman Collection
+
+For a more interactive way to test the API, you can use the included Postman collection.
+
+### How to use:
+
+1. **Import the collection**:
+   - Open Postman.
+   - Click the **Import** button.
+   - Select the file [Axum_Todo_API.postman_collection.json](Axum_Todo_API.postman_collection.json) from the project root.
+
+2. **Set up Environment**:
+   - The collection uses a `baseUrl` variable.
+   - By default, it is set to `http://localhost:3000`.
+   - You can create a new Environment in Postman or edit the Collection's variables to change the port or host if needed.
+
+3. **Run Requests**:
+   - All CRUD operations are pre-configured.
+   - Ensure the server is running (`cargo run`) before sending requests.
 
 ---
 
